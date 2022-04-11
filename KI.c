@@ -213,6 +213,7 @@ void genom_copy(genom_parameter _genom_para, float* _genom, float* _genom_destin
 
 void stable_knecht(genom_parameter _genom_para,float** _stable, float* _fitness,float major_c, float minor_c, float minor_f,int surivors ){
     double_bubble_sort(_genom_para, &_stable, &_fitness);
+    //printf("Top Genom Fitness: %f\n", _fitness[0]);
     for (int j = 1; j <= _genom_para.stable_size/surivors; j++ ){
 	for (int i = 0; i < surivors; i++){
 	    if (j*surivors+i >= _genom_para.stable_size){
